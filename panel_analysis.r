@@ -3,7 +3,9 @@ library("plm")
 
 # normal panel analysis
 pdata = read.csv('./panel_data.csv')
+summary(pdata)
 E <-pdata.frame(pdata, index = c("permalink", "year"), drop.index = TRUE, row.names = TRUE)
+summary(E)
 fx.presult <- plm(
     m_fr_sum ~
     serial_num + 
